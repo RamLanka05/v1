@@ -1,16 +1,34 @@
 export default function Hero() {
+  const navLinks = [
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+  ]
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
-      <div className="max-w-3xl text-center px-6 py-24">
-        <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Hi, my name is</p>
-        <h1 className="text-5xl sm:text-7xl font-bold mb-4">Sathvik Ram Lanka</h1>
-        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-6">
-          Description
+    <aside className="w-full min-h-screen h-screen sticky top-0 bg-gray-900 text-white flex flex-col justify-center py-24 px-8">
+      <div>
+        <h1 className="text-5xl sm:text-6xl font-bold mb-2">Sathvik Ram Lanka</h1>
+        <h2 className="text-2xl text-gray-400 mb-6">Full Stack Developer</h2>
+        <p className="text-lg text-gray-300 mb-8 max-w-md leading-relaxed">
+          I build scalable web applications with modern technologies. Passionate about clean code and great user experiences.
         </p>
-        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Description
-        </p>
+        
+        {/* Navigation Links */}
+        <nav className="mt-12 space-y-2">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="block text-gray-400 hover:text-blue-400 transition-colors font-semibold uppercase text-sm tracking-widest"
+            >
+              <span className="text-blue-400 mr-2"></span>
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </div>
-    </section>
+    </aside>
   )
 }
+

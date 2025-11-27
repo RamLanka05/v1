@@ -4,9 +4,9 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-24 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
+    <section id="experience" className="py-24 px-12 bg-gray-50 dark:bg-gray-900">
+      <div className="max-w-xl">
+        <h2 className="text-3xl font-bold mb-8">
           <span className="text-blue-600 dark:text-blue-400">02.</span> Experience
         </h2>
         <div className="space-y-8">
@@ -14,12 +14,12 @@ export default function Experience() {
             <article key={it.role} className="border-l-2 border-blue-600 dark:border-blue-400 pl-6">
               <div className="flex items-start justify-between mb-2">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{it.role}</h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">{it.company}</p>
+                  <h3 className="text-lg font-semibold">{it.role}</h3>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">{it.company}</p>
                 </div>
-                <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap ml-4">{it.period}</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap ml-4">{it.period}</span>
               </div>
-              <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">{it.desc}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{it.desc}</p>
             </article>
           ))}
         </div>
