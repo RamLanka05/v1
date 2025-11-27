@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Small helpers for App sections */
+main {
+  display: block;
+}
+
+section {
+  scroll-margin-top: 4rem;
+}
