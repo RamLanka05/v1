@@ -9,10 +9,12 @@ import Projects from './components/Projects'
 
 function App() {
   return (
-    <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex">
-      {/* Left column: change `w-1/3` or `min-w-[320px]` to move/resize the hero */}
-      <aside className="w-1/2 min-w-[300px]">
-        <Hero />
+    <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 gap-14">
+      {/* Left column */}
+      <aside className="w-[36%] min-w-[320px] flex justify-end">
+        <div className="max-w-[560px] w-full">
+          <Hero />
+        </div>
       </aside>
 
       {/* Right column: main content scrolls */}
