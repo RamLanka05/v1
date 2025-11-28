@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex">
       {/* Left column: change `w-1/3` or `min-w-[320px]` to move/resize the hero */}
-      <aside className="w-1/2 min-w-[320px]">
+      <aside className="w-1/2 min-w-[300px]">
         <Hero />
       </aside>
 
       {/* Right column: main content scrolls */}
       <main className="flex-1 bg-white dark:bg-gray-950">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <About />
           <Experience />
           <Projects />

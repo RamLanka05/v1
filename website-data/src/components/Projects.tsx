@@ -14,6 +14,13 @@ export default function Projects() {
       url: '',
       tags: ['React', 'Node.js']
     },
+    {
+      title: 'Personal Blog',
+      desc: 'A personal blog platform where I share articles about web development and programming.',
+      date: '2024',
+      url: '',
+      tags: ['Gatsby', 'GraphQL', 'Markdown']
+    },
   ]
 
   return (

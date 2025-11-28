@@ -1,6 +1,20 @@
 export default function Experience() {
   const items = [
-    { role: 'Software Developer Intern', company: 'OLI Gardens, Patriotic Gardens', period: 'May 2025 — Present', desc: 'Developed a full stack web platform serving a non-profit organization utilizing MongoDB, Express.js, React, Node.js, and more than 15 API endpoints featuring secure admin authentication, content management, and integrated payment processing systems. Implemented a secure JWT-based authentication system with bcrypt password hashing, protected admin routes, and role based access supporting multiple admins and account management. Integrated Stripe payment processing for collecting donations with customizable donation tiers, secure checkout sessions, and automated success/failure handling. Utilized Tailwind CSS and Headless UI to implement advanced UI/UX elements, including infinite-scroll carousels, filterable blog sliders, and custom dropdowns.' },
+    {
+      role: 'VR Developer Intern',
+      company: 'ATLAS UIUC',
+      period: 'August 2025 - December 2025',
+      desc: `Collaborated with a team of developers to create immersive VR experiences using Unity and C#. Developed interactive 3D environments and optimized performance for various VR platforms. Implemented user interface elements and integrated audio-visual effects to enhance user engagement.`,
+    },
+    {
+      role: 'Software Developer Intern',
+      company: 'OLI Gardens, Patriotic Gardens',
+      period: 'May 2025 — Present',
+      desc: `Developed a full stack web platform serving a non-profit organization utilizing MongoDB, Express.js, React, and Node.js. Built and maintained more than 15 API endpoints for secure admin authentication, content management, and integrated payment processing systems.
+        Implemented a secure JWT-based authentication system with bcrypt password hashing, protected admin routes, and role-based access supporting multiple admins and account management.
+        Integrated Stripe payment processing for collecting donations with customizable donation tiers, secure checkout sessions, and automated success/failure handling to support the organization's fundraising efforts.
+        Utilized Tailwind CSS and Headless UI to implement advanced UI/UX elements, including infinite-scroll carousels, filterable blog sliders, and custom dropdowns.`,
+    },
   ]
 
   return (
