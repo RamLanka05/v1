@@ -1,5 +1,6 @@
 import './App.css'
 import { useEffect, useRef } from 'react'
+import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
@@ -74,22 +75,25 @@ function App() {
   }, [])
 
   return (
-    <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 gap-x-8 items-start h-screen">
-      {/* Left column: Bio - Sticky */}
-      <aside className="sticky top-0 h-screen lg:w-[36%] w-auto min-w-[320px] flex flex-col items-center justify-start lg:px-8 z-20 bg-white dark:bg-gray-950">
-        <div className="flex flex-col items-start px-2 pt-4 overflow-y-auto">
-          <Hero />
-          <About />
-        </div>
-      </aside>
+    <>
+      <Navigation />
+      <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 gap-x-8 items-start h-[calc(100vh-6rem)]">
+        {/* Left column: Bio - Sticky */}
+        <aside className="h-full lg:fixed lg:left-[calc((100%-72rem)/2)] lg:w-[360px] w-auto min-w-[320px] flex flex-col items-start justify-start lg:px-8 z-20 bg-white dark:bg-gray-950">
+          <div className="flex flex-col items-start px-4 overflow-y-auto h-full">
+            <Hero />
+            <About />
+          </div>
+        </aside>
 
-      {/* Right column: Scrollable content */}
-      <main ref={mainRef} className="flex-1 bg-white dark:bg-gray-950 lg:pl-12 overflow-y-auto h-screen">
-        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-0">
-          <WorkShowcase />
-        </div>
-      </main>
-    </div>
+        {/* Right column: Scrollable content */}
+        <main ref={mainRef} className="flex-1 bg-white dark:bg-gray-950 lg:pl-12 lg:ml-[360px] overflow-y-auto h-full">
+          <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-0 pt-8">
+            <WorkShowcase />
+          </div>
+        </main>
+      </div>
+    </>
   )
 }
 

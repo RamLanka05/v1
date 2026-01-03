@@ -2,7 +2,7 @@ import { projects as projectsData } from '../data/work'
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-transparent dark:bg-transparent">
+    <section id="projects" className="py-24 px-6 bg-transparent dark:bg-transparent scroll-mt-24">
       <div className="max-w-xl">
         <h2 className="text-3xl font-bold mb-6">Projects</h2>
 
