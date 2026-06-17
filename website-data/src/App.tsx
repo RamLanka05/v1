@@ -1,102 +1,28 @@
-import './App.css'
-import { useEffect, useRef } from 'react'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
 
 function App() {
-  const mainRef = useRef<HTMLDivElement | null>(null)
-
-  useEffect(() => {
-    let rafId: number | null = null
-    let targetY = 0
-    let currentY = 0
-    let targetX = 0
-    let currentX = 0
-
-    const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v))
-
-    const animate = () => {
-      const el = mainRef.current
-      if (!el) return
-
-      currentY += (targetY - currentY) * 0.15
-      currentX += (targetX - currentX) * 0.15
-
-      el.scrollTo({ top: currentY, left: currentX })
-
-      if (Math.abs(targetY - currentY) > 0.5 || Math.abs(targetX - currentX) > 0.5) {
-        rafId = requestAnimationFrame(animate)
-      } else {
-        rafId = null
-      }
-    }
-
-    const wheelHandler = (e: WheelEvent) => {
-      const el = mainRef.current
-      if (!el) return
-      if (e.ctrlKey) return
-      e.preventDefault()
-
-      const maxY = el.scrollHeight - el.clientHeight
-      const maxX = el.scrollWidth - el.clientWidth
-
-      // initialize targets to current scroll positions if first interaction
-      if (rafId === null) {
-        currentY = el.scrollTop
-        currentX = el.scrollLeft
-        targetY = currentY
-        targetX = currentX
-      }
-
-      // accumulate delta for inertia feel, allow smaller step for smoother feel
-      targetY = clamp(targetY + e.deltaY * 0.9, 0, Math.max(0, maxY))
-      targetX = clamp(targetX + e.deltaX * 0.9, 0, Math.max(0, maxX))
-
-      if (rafId === null) {
-        rafId = requestAnimationFrame(animate)
-      }
-    }
-
-    window.addEventListener('wheel', wheelHandler, { passive: false })
-
-    const prevHtmlOverflow = document.documentElement.style.overflow
-    const prevBodyOverflow = document.body.style.overflow
-    document.documentElement.style.overflow = 'hidden'
-    document.body.style.overflow = 'hidden'
-
-    return () => {
-      window.removeEventListener('wheel', wheelHandler)
-      if (rafId) cancelAnimationFrame(rafId)
-      document.documentElement.style.overflow = prevHtmlOverflow
-      document.body.style.overflow = prevBodyOverflow
-    }
-  }, [])
-
   return (
-    <>
-      <Navigation />
-      <div className="antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white flex max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 gap-x-12 items-start h-[calc(100vh-6rem)]">
-        {/* Left column: Bio - Sticky */}
-        <aside className="h-full lg:sticky lg:top-24 lg:w-[320px] lg:pr-12 lg:mr-24 w-auto min-w-[200px] flex flex-col items-start justify-start lg:px-8 z-20 bg-white dark:bg-gray-950">
-          <div className="flex flex-col items-start px-4 overflow-y-auto h-full">
+    <div className="bg-white dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-200 font-sans antialiased">
+      <div className="max-w-screen-xl mx-auto px-6 py-12 md:px-12 md:py-20 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">
+        
+        <header className="md:sticky md:top-0 md:h-screen md:w-1/2 flex flex-col justify-between py-12 md:py-24">
+          <div>
             <Hero />
-            <About />
+            <div className="mt-8 hidden md:block">
+              <Navigation />
+            </div>
           </div>
-        </aside>
+        </header>
 
-        {/* Spacer column */}
-        <div className="w-48 min-w-48 flex-shrink-0 text-transparent select-none">BRO PLEASE</div>
-
-        {/* Right column: Scrollable content */}
-        <main ref={mainRef} className="flex-1 min-w-0 bg-white dark:bg-gray-950 lg:pl-24 overflow-y-auto h-full">
-          <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-0 pt-8">
-            <WorkShowcase />
-          </div>
+        <main className="md:w-1/2 flex flex-col gap-24 py-12 md:py-24">
+          <About />
+          <WorkShowcase />
         </main>
       </div>
-    </>
+    </div>
   )
 }
 

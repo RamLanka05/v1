@@ -4,9 +4,8 @@ export default function Navigation() {
   const [active, setActive] = useState<'projects' | 'experience'>('experience')
 
   useEffect(() => {
-    const mainEl = document.querySelector('main')
     const opts: IntersectionObserverInit = { 
-      root: mainEl, 
+      root: null, // Use the viewport
       rootMargin: '-40% 0px -40% 0px', 
       threshold: 0 
     }
@@ -30,43 +29,44 @@ export default function Navigation() {
   }, [])
 
   function scrollToSection(section: 'projects' | 'experience') {
-    const mainEl = document.querySelector('main') as HTMLElement | null
     const target = document.getElementById(section)
-    if (!mainEl || !target) return
+    if (!target) return
 
-    const targetRect = target.getBoundingClientRect()
-    const mainRect = mainEl.getBoundingClientRect()
-    const offset = targetRect.top - mainRect.top + mainEl.scrollTop - 16
-
-    mainEl.scrollTo({ top: offset, behavior: 'smooth' })
+    // Scroll naturally using the window
+    const offset = target.getBoundingClientRect().top + window.scrollY - 100 // 100px padding
+    window.scrollTo({ top: offset, behavior: 'smooth' })
   }
 
   return (
-    <nav className="w-full h-24 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-4">
-        <div className="flex items-center justify-end gap-2">
+    <nav className="w-full">
+      <ul className="flex flex-col gap-4 mt-8">
+        <li>
           <button 
             onClick={() => scrollToSection('experience')} 
-            className={`px-4 py-2 rounded-full transition-colors ${
+            className={`group flex items-center py-3 w-max transition-all ${
               active === 'experience' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'text-gray-900 dark:text-gray-100 font-bold' 
+                : 'text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200'
             }`}
           >
+            <span className={`mr-4 h-px transition-all bg-gray-900 dark:bg-gray-100 ${active === 'experience' ? 'w-16' : 'w-8 group-hover:w-16'}`}></span>
             Experience
           </button>
+        </li>
+        <li>
           <button 
             onClick={() => scrollToSection('projects')} 
-            className={`px-4 py-2 rounded-full transition-colors ${
+            className={`group flex items-center py-3 w-max transition-all ${
               active === 'projects' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                ? 'text-gray-900 dark:text-gray-100 font-bold' 
+                : 'text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200'
             }`}
           >
+            <span className={`mr-4 h-px transition-all bg-gray-900 dark:bg-gray-100 ${active === 'projects' ? 'w-16' : 'w-8 group-hover:w-16'}`}></span>
             Projects
           </button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </nav>
   )
 }

@@ -16,12 +16,12 @@ export const projects = [
     tags: ['React', 'Node.js'],
   },
   {
-    id: 'statwizard',
-    title: 'StatWizard',
-    desc: 'A personal blog platform where I share articles about web development and programming.',
-    date: '2024',
+    id: 'rsse',
+    title: 'Rigveda Semantic Search Engine',
+    desc: 'A semantic search engine for the Rigveda, built with Python and Elasticsearch.',
+    date: '2025-2026',
     url: '',
-    tags: ['Gatsby', 'GraphQL', 'Markdown'],
+    tags: ['Python', 'Elasticsearch', 'NLP'],
   },
 ]
 
@@ -37,7 +37,7 @@ export const experience = [
     id: 'oli-gardens',
     role: 'Software Developer Intern',
     company: 'OLI Gardens, Patriotic Gardens',
-    period: 'May 2025 — Present',
+    period: 'May 2025 — December 2025',
     desc: `Developed a full stack web platform serving a non-profit organization utilizing MongoDB, Express.js, React, and Node.js. Built and maintained more than 15 API endpoints for secure admin authentication, content management, and integrated payment processing systems.
       Implemented a secure JWT-based authentication system with bcrypt password hashing, protected admin routes, and role-based access supporting multiple admins and account management.
       Integrated Stripe payment processing for collecting donations with customizable donation tiers, secure checkout sessions, and automated success/failure handling to support the organization's fundraising efforts.
