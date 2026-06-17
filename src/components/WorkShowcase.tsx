@@ -5,6 +5,7 @@ export default function WorkShowcase() {
   return (
     <div className="mb-8">
       <Experience />
+      <div className="h-16" />
       <Projects />
     </div>
   )

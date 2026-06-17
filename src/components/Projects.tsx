@@ -1,13 +1,40 @@
 import { projects as projectsData } from '../data/work'
 
 export default function Projects() {
+  
+  // Custom function to translate "Spring 2025" into a sortable number
+  const getSortWeight = (dateStr: string) => {
+    // 1. Grab the year
+    const yearMatch = dateStr.match(/\d{4}/);
+    const year = yearMatch ? parseInt(yearMatch[0], 10) : 0;
+
+    // 2. Assign a decimal weight based on the academic semester/season
+    let seasonWeight = 0;
+    const lower = dateStr.toLowerCase();
+    
+    // Academic calendar order
+    if (lower.includes('winter')) seasonWeight = 0.1; 
+    else if (lower.includes('spring')) seasonWeight = 0.3;
+    else if (lower.includes('summer')) seasonWeight = 0.6;
+    else if (lower.includes('fall') || lower.includes('autumn')) seasonWeight = 0.8;
+    // If it just says "2024", it defaults to 0, placing it after the specific seasons of that year
+
+    // 3. Return the combined score (e.g., "Spring 2025" becomes 2025.3)
+    return year + seasonWeight;
+  };
+
+  // Sort projects from newest (highest number) to oldest (lowest number)
+  const sortedProjects = [...projectsData].sort((a, b) => 
+    getSortWeight(b.date) - getSortWeight(a.date)
+  );
+
   return (
     <section id="projects" className="scroll-mt-24">
       <h2 className="text-3xl font-bold mb-10 text-gray-900 dark:text-gray-100">Projects</h2>
 
       {/* Changed to a vertical stack with massive gaps between projects */}
       <div className="flex flex-col gap-20">
-        {projectsData.map((p) => (
+        {sortedProjects.map((p) => (
           <article key={p.id} className="group relative flex flex-col items-start justify-start">
             
             {/* 1. Large Feature Image (Only renders if p.image exists) */}

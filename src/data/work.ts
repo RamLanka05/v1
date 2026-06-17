@@ -25,19 +25,19 @@ export const projects = [
     insight: 'Translating ancient semantics into multidimensional vector space required custom tokenization strategies far beyond standard English LLM pipelines.',
     tags: ['Machine Learning', 'NLP', 'Python', 'Vector DB']
   },
-  // {
-  //   id: 'chip8',
-  //   title: 'Chip-8 Emulator',
-  //   status: 'Completed',
-  //   date: '2024',
-  //   role: 'Systems Programmer',
-  //   image: '/projects/chip8.jpg',
-  //   url: '',
-  //   github: 'https://github.com/RamLanka05/...',
-  //   desc: 'A custom hardware emulator written from scratch, handling CPU cycles, memory management, and display rendering at the lowest level.',
-  //   insight: 'Building an emulator is the ultimate exercise in understanding the abstraction layer between raw opcodes and software execution.',
-  //   tags: ['C/C++', 'Systems', 'Low-Level Architecture']
-  // }
+  {
+    id: 'cuda-mandelbrot',
+    title: 'GPU-Accelerated Fractal Renderer',
+    status: 'Completed',
+    date: '2026',
+    role: 'Systems & Graphics Programmer',
+    image: '', //empty for now, ADD LATER
+    url: '',
+    github: 'https://github.com/RamLanka05/Mandelbrot-Set-Generator',
+    desc: 'A high-performance Mandelbrot engine written in C++ and CUDA, featuring a dynamic aspect-locked camera, continuous color smoothing, and 2x2 supersampling for instantaneous 4K renders.',
+    insight: 'Pushing hardware limits taught me that rendering beautiful graphics isn\'t just about the math—it requires meticulously optimizing memory bandwidth and bypassing disk I/O bottlenecks.',
+    tags: ['C++', 'CUDA', 'Parallel Computing', 'Graphics']
+  }
 ];
 
 export const experience = [
