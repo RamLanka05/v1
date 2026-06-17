@@ -1,29 +1,44 @@
 export const projects = [
   {
-    id: 'portfolio',
-    title: 'Portfolio',
-    desc: 'This site — built with React, Vite, and Tailwind CSS.',
-    date: '2025',
-    url: '',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-  },
-  {
     id: 'solar',
     title: 'SolAR',
-    desc: 'Coming soon...',
-    date: '2025',
-    url: '',
-    tags: ['React', 'Node.js'],
+    status: 'Live',
+    date: 'Spring 2025',
+    role: 'HackIllinois 2025 Winner',
+    image: '', // Path to your screenshot in the public folder
+    url: 'https://devpost.com/software/solar-ado76i',
+    github: 'https://github.com/Zaydo123/SolAR', 
+    desc: 'A decentralized Git server built on the blockchain, allowing for censorship-resistant code hosting and version control.',
+    insight: 'By leveraging Solana for consensus and Arweave for permanent storage, we eliminated the single points of failure present in traditional Git providers.',
+    tags: ['Solana', 'ARweave', 'Web3', 'Architecture']
   },
   {
-    id: 'rsse',
-    title: 'Rigveda Semantic Search Engine',
-    desc: 'A semantic search engine for the Rigveda, built with Python and Elasticsearch.',
-    date: '2025-2026',
-    url: '',
-    tags: ['Python', 'Elasticsearch', 'NLP'],
+    id: 'rigveda-search',
+    title: 'Rigveda Semantic Search',
+    status: 'In Development',
+    date: 'Winter 2025',
+    role: 'ML Engineer',
+    image: '/Analysis_Demo1.png',
+    url: 'https://rigveda-sse.streamlit.app',
+    github: 'https://github.com/RamLanka05/ML1',
+    desc: 'An AI-native search engine designed to parse, analyze, and query complex Sanskrit texts using advanced NLP vector embeddings.',
+    insight: 'Translating ancient semantics into multidimensional vector space required custom tokenization strategies far beyond standard English LLM pipelines.',
+    tags: ['Machine Learning', 'NLP', 'Python', 'Vector DB']
   },
-]
+  // {
+  //   id: 'chip8',
+  //   title: 'Chip-8 Emulator',
+  //   status: 'Completed',
+  //   date: '2024',
+  //   role: 'Systems Programmer',
+  //   image: '/projects/chip8.jpg',
+  //   url: '',
+  //   github: 'https://github.com/RamLanka05/...',
+  //   desc: 'A custom hardware emulator written from scratch, handling CPU cycles, memory management, and display rendering at the lowest level.',
+  //   insight: 'Building an emulator is the ultimate exercise in understanding the abstraction layer between raw opcodes and software execution.',
+  //   tags: ['C/C++', 'Systems', 'Low-Level Architecture']
+  // }
+];
 
 export const experience = [
   {
