@@ -42,7 +42,7 @@ export default function Hero() {
 
         {/* LinkedIn */}
         <a 
-          href="https://linkedin.com/in/YOUR_LINKEDIN_HERE" 
+          href="https://www.linkedin.com/in/sathvik-r-lanka/" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2" 
