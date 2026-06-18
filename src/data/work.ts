@@ -1,12 +1,38 @@
-export const projects = [
+export type Project = {
+  id: string;
+  title: string;
+  status: string;
+  date: string;
+  role: string;
+  image: string;
+  url: string;
+  urlType?: 'Live' | 'Demo'; // Our optional toggle
+  github: string;
+  desc: string;
+  insight: string;
+  tags: string[];
+  starred?: boolean;         // Our optional star toggle
+};
+
+export type ExperienceItem = {
+  id: string;
+  role: string;
+  company: string;
+  period: string;
+  desc: string;
+};
+
+// 2. Apply the type to the arrays
+export const projects: Project[] = [
   {
     id: 'solar',
     title: 'SolAR',
-    status: 'Live',
+    status: 'Completed',
     date: 'Spring 2025',
     role: 'HackIllinois 2025 Winner',
-    image: '', // Path to your screenshot in the public folder
+    image: '', 
     url: 'https://devpost.com/software/solar-ado76i',
+    urlType: 'Demo', 
     github: 'https://github.com/Zaydo123/SolAR', 
     desc: 'A decentralized Git server built on the blockchain, allowing for censorship-resistant code hosting and version control.',
     insight: 'By leveraging Solana for consensus and Arweave for permanent storage, we eliminated the single points of failure present in traditional Git providers.',
@@ -14,12 +40,14 @@ export const projects = [
   },
   {
     id: 'rigveda-search',
-    title: 'Rigveda Semantic Search',
+    title: 'Rigveda Semantic Search Engine',
     status: 'In Development',
     date: 'Winter 2025',
     role: 'ML Engineer',
+    starred: true,
     image: '/Analysis_Demo1.png',
     url: 'https://rigveda-sse.streamlit.app',
+    urlType: 'Live',
     github: 'https://github.com/RamLanka05/ML1',
     desc: 'An AI-native search engine designed to parse, analyze, and query complex Sanskrit texts using advanced NLP vector embeddings.',
     insight: 'Translating ancient semantics into multidimensional vector space required custom tokenization strategies far beyond standard English LLM pipelines.',
@@ -31,16 +59,17 @@ export const projects = [
     status: 'Completed',
     date: '2026',
     role: 'Systems & Graphics Programmer',
-    image: '', //empty for now, ADD LATER
+    starred: true,
+    image: '', 
     url: '',
     github: 'https://github.com/RamLanka05/Mandelbrot-Set-Generator',
     desc: 'A high-performance Mandelbrot engine written in C++ and CUDA, featuring a dynamic aspect-locked camera, continuous color smoothing, and 2x2 supersampling for instantaneous 4K renders.',
-    insight: 'Pushing hardware limits taught me that rendering beautiful graphics isn\'t just about the math—it requires meticulously optimizing memory bandwidth and bypassing disk I/O bottlenecks.',
+    insight: 'Pushing hardware limits taught me that rendering beautiful graphics isn\'t just about the math, and that it requires meticulously optimizing memory bandwidth and bypassing disk I/O bottlenecks.',
     tags: ['C++', 'CUDA', 'Parallel Computing', 'Graphics']
   }
 ];
 
-export const experience = [
+export const experience: ExperienceItem[] = [
   {
     id: 'atlas-vr',
     role: 'VR Developer Intern',
@@ -60,5 +89,3 @@ export const experience = [
   },
 ]
 
-export type Project = typeof projects[number]
-export type ExperienceItem = typeof experience[number]
