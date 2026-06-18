@@ -66,6 +66,19 @@ export const projects: Project[] = [
     desc: 'A high-performance Mandelbrot engine written in C++ and CUDA, featuring a dynamic aspect-locked camera, continuous color smoothing, and 2x2 supersampling for instantaneous 4K renders.',
     insight: 'Pushing hardware limits taught me that rendering beautiful graphics isn\'t just about the math, and that it requires meticulously optimizing memory bandwidth and bypassing disk I/O bottlenecks.',
     tags: ['C++', 'CUDA', 'Parallel Computing', 'Graphics']
+  }, 
+{
+    id: 'earthdb',
+    title: 'EarthDB',
+    status: 'Completed',
+    date: 'Fall 2025',
+    role: 'Full Stack Developer',
+    image: '',
+    url: '',
+    github: 'https://github.com/RamLanka05/Earth_DB',
+    desc: 'An interactive, Google Earth-inspired 3D web application built with Three.js. The platform features secure authentication, full CRUD operations, and diverse country datasets sourced from Kaggle and hosted on Google Cloud Platform.',
+    insight: 'Bridging a fully 3D frontend with a scalable cloud backend required balancing WebGL rendering performance with dynamic API calls to ensure a seamless exploration of global statistics.',
+    tags: ['Three.js', 'GCP', 'Full Stack', 'WebGL']
   }
 ];
 
@@ -81,7 +94,7 @@ export const experience: ExperienceItem[] = [
     id: 'oli-gardens',
     role: 'Software Developer Intern',
     company: 'OLI Gardens, Patriotic Gardens',
-    period: 'May 2025 — December 2025',
+    period: 'May 2025 - December 2025',
     desc: `Developed a full stack web platform serving a non-profit organization utilizing MongoDB, Express.js, React, and Node.js. Built and maintained more than 15 API endpoints for secure admin authentication, content management, and integrated payment processing systems.
       Implemented a secure JWT-based authentication system with bcrypt password hashing, protected admin routes, and role-based access supporting multiple admins and account management.
       Integrated Stripe payment processing for collecting donations with customizable donation tiers, secure checkout sessions, and automated success/failure handling to support the organization's fundraising efforts.
