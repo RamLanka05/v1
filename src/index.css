@@ -1,9 +1,25 @@
 @import "tailwindcss";
 
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
+/* 1. Tell Tailwind v4 to look for the "dark" class for dark mode */
+@theme {
+  --default-font-family: sans-serif;
+}
+@custom-variant dark (&:is(.dark *));
 
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* 2. Global styling */
+html { 
+  scroll-behavior: smooth; 
+}
+body { 
+  margin: 0; 
+  min-width: 320px; 
+}
+
+/* 3. The new v4 way to define custom utilities */
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
