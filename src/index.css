@@ -1,21 +1,27 @@
 @import "tailwindcss";
 
-/* 1. Tell Tailwind v4 to look for the "dark" class for dark mode */
 @theme {
   --default-font-family: sans-serif;
 }
 @custom-variant dark (&:is(.dark *));
 
-/* 2. Global styling */
 html { 
   scroll-behavior: smooth; 
 }
+
+/* 1. The Global Backgrounds */
 body { 
   margin: 0; 
   min-width: 320px; 
+  background-color: #f4f7fb; 
+  @apply text-slate-900 transition-colors duration-500;
 }
 
-/* 3. The new v4 way to define custom utilities */
+html.dark body {
+  background-color: #0b1120;
+  @apply text-slate-300;
+}
+
 @utility no-scrollbar {
   &::-webkit-scrollbar {
     display: none;
