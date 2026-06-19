@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
 
 export default function TopBar() {
+
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('dark') || 
-             (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      // Check if they explicitly saved 'light' in a previous visit
+      if (localStorage.getItem('theme') === 'light') return false;
+      // Otherwise, force dark mode for everyone!
+      return true; 
     }
-    return true
-  })
-
+    return true;
+  });
+  
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark')
@@ -18,6 +21,7 @@ export default function TopBar() {
       localStorage.setItem('theme', 'light')
     }
   }, [isDark])
+
 
   return (
     <button
