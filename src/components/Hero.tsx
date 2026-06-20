@@ -29,7 +29,7 @@ export default function Hero() {
         
         {/* Resume Button */}
         <a 
-          href="assets/SathvikLankaR.pdf" 
+          href="/SathvikLankaR.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-sm font-semibold text-white bg-gray-900 dark:bg-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 px-5 py-2.5 rounded-lg transition-all shadow-sm"
