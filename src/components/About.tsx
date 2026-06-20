@@ -10,7 +10,7 @@ export default function About() {
           I approach software as a tool for thought. I love bridging the gap between complex backend logic and seamless user experiences, ensuring that the applications I build are not just functional, but genuinely enjoyable to use. 
         </p>
         <p>
-          When I'm stepping away from the keyboard and not tinkering with my Notion setups, you can usually find me at the rock climbing gym, testing out new recipes in the kitchen, or spending time in the garden tending to my roses and milkweed.
+          When I'm stepping away from the keyboard and not tinkering with my Notion setups, you can usually find me at the rock climbing gym, testing out new recipes in the kitchen, or pursuing various other hobbies I switch between.
         </p>
       </div>
     </section>

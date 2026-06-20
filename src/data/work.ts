@@ -45,7 +45,7 @@ export const projects: Project[] = [
     date: 'Winter 2025',
     role: 'ML Engineer',
     starred: true,
-    image: '/Analysis_Demo1.png',
+    image: '',
     url: 'https://rigveda-sse.streamlit.app',
     urlType: 'Live',
     github: 'https://github.com/RamLanka05/ML1',
@@ -88,7 +88,9 @@ export const experience: ExperienceItem[] = [
     role: 'VR Developer Intern',
     company: 'ATLAS UIUC',
     period: 'August 2025 - December 2025',
-    desc: `Collaborated with a team of developers to create immersive VR experiences using Unity and C#. Developed interactive 3D environments and optimized performance for various VR platforms. Implemented user interface elements and integrated audio-visual effects to enhance user engagement.`,
+    desc: `Built interactive Virtual Reality environments for Quad Games, a Unity-based simulation deployed to Meta Quest headsets, requiring real-time performance optimization and hardware-level debugging to maintain consistent frame rates under constrained mobile GPU resources.
+      Developed a VR Archery Game in C# with custom physics engines for projectile motion and collision detection, implementing a real-time scoring system that synchronized game state across networked VR sessions.
+      Optimized the VR production pipeline by automating the build and deployment process through Visual Studio tooling and Meta Quest Link integration, reducing iteration cycle time by >50% and enabling rapid testing of physics and gameplay logic.`,
   },
   {
     id: 'oli-gardens',
