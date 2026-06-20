@@ -5,7 +5,6 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-24">
       <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Experience</h2>
 
-      {/* Swapped grid for a vertical flex column */}
       <div className="flex flex-col gap-12">
         {experienceData.map((it) => (
           <article 
@@ -23,8 +22,7 @@ export default function Experience() {
                 </p>
               </div>
               
-              {/* Pushed the date to the right on desktop, kept it subdued */}
-              <span className="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
+              <span className="text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap bg-gray-100/50 dark:bg-gray-800/50 px-3 py-1 rounded-full">
                 {it.period}
               </span>
             </div>
@@ -64,9 +62,6 @@ export default function Experience() {
 //                 </p>
 //               </div>
               
-//               <span className="text-sm font-medium text-gray-500 dark:text-gray-400 whitespace-nowrap bg-gray-100/50 dark:bg-gray-800/50 px-3 py-1 rounded-full">
-//                 {it.period}
-//               </span>
 //             </div>
             
 //             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mt-2 whitespace-pre-line">

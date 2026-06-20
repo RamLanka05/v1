@@ -56,8 +56,8 @@ export const projects: Project[] = [
   {
     id: 'cuda-mandelbrot',
     title: 'GPU-Accelerated Fractal Renderer',
-    status: 'Completed',
-    date: '2026',
+    status: 'In Development',
+    date: 'Summer 2026',
     role: 'Systems & Graphics Programmer',
     starred: true,
     image: '', 
