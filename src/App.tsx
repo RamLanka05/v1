@@ -7,9 +7,12 @@ import TopBar from './components/TopBar'
 function App() {
   return (
     <div className="bg-white dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-200 font-sans antialiased">
-      <div className="max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-20 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">
-        <TopBar />
-        <header className="md:sticky md:top-0 md:h-screen md:w-1/2 flex flex-col justify-between py-12 md:py-24">
+
+      <TopBar />
+
+      <div className="max-w-7xl mx-auto px-6 pt-12 pb-0 md:px-12 md:pt-20 md:pb-0 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">
+        
+        <header className="md:sticky md:top-0 md:h-screen md:w-1/2 flex flex-col justify-between pt-12 pb-0 md:pt-24 md:pb-0">
           <div>
             <Hero />
             <div className="mt-8 hidden md:block">
@@ -18,7 +21,7 @@ function App() {
           </div>
         </header>
 
-        <main className="md:w-1/2 flex flex-col gap-24 py-12 md:py-24">
+        <main className="md:w-1/2 flex flex-col gap-24 pt-12 pb-0 md:pt-24 md:pb-0">
           <About />
           <WorkShowcase />
         </main>
