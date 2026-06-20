@@ -1,63 +1,25 @@
 @import "tailwindcss";
 
-/* 1. Map our custom CSS variables to Tailwind classes */
 @theme {
   --default-font-family: sans-serif;
-  
-  /* This creates classes like: bg-background, text-foreground, border-border */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-sidebar: var(--sidebar);
-  --color-input: var(--input-background);
 }
-
 @custom-variant dark (&:is(.dark *));
-
-/* 2. Your Custom Figma Light Mode */
-:root {
-  --background: #eef3fb;
-  --foreground: #0d1b2e;
-  --card: #f5f8fd;
-  --primary: #1a3562;
-  --secondary: #d8e5f5;
-  --muted: #e2ecf7;
-  --muted-foreground: #4a6080;
-  --border: rgba(26, 53, 98, 0.13);
-  --sidebar: #dce8f6;
-  --input-background: #eaf0fa;
-}
-
-/* 3. The Midnight Dark Mode Equivalents */
-html.dark {
-  --background: #0b1120;
-  --foreground: #f8fafc;
-  --card: rgba(255, 255, 255, 0.03); 
-  --primary: #60a5fa; 
-  --secondary: #1e293b; 
-  --muted: #0f172a; 
-  --muted-foreground: #94a3b8; 
-  --border: rgba(255, 255, 255, 0.1);
-  --sidebar: #0f172a;
-  --input-background: rgba(255, 255, 255, 0.05);
-}
 
 html { 
   scroll-behavior: smooth; 
 }
 
-/* 4. Apply the global background and text colors */
+/* 1. The Global Backgrounds */
 body { 
   margin: 0; 
   min-width: 320px; 
-  background-color: var(--background);
-  color: var(--foreground);
-  @apply transition-colors duration-500;
+  background-color: #f4f7fb; 
+  @apply text-slate-900 transition-colors duration-500;
+}
+
+html.dark body {
+  background-color: #0b1120;
+  @apply text-slate-300;
 }
 
 @utility no-scrollbar {
