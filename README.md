@@ -41,7 +41,6 @@ I built this site using a modern React stack to ensure speed, type safety, and s
 ├── package.json            # Dependencies and scripts
 ├── vite.config.ts          # Vite configuration
 ├── tsconfig.json           # TypeScript configuration
-├── tailwind.config.cjs     # Tailwind CSS configuration
 └── eslint.config.js        # ESLint configuration
 ```
 
@@ -67,6 +66,8 @@ npm install
 # Start the dev server (hot reload enabled)
 npm run dev
 ```
+
+The website will be running on 'http://localhost:5173/'
 
 ### Building for Production
 
