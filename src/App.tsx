@@ -3,13 +3,15 @@ import Hero from './components/Hero'
 import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
 import TopBar from './components/TopBar'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <div className="bg-white dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-200 font-sans antialiased">
 
       <TopBar />
-
+      <Analytics />
+      
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-0 md:px-12 md:pt-20 md:pb-0 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">
         
         <header className="md:sticky md:top-0 md:h-screen md:w-1/2 flex flex-col justify-between pt-12 pb-0 md:pt-24 md:pb-0">
