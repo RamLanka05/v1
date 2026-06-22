@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
 import TopBar from './components/TopBar'
+import CustomCursor from './components/CustomCursor'
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="bg-white dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-200 font-sans antialiased">
 
       <TopBar />
+      <CustomCursor />
       <Analytics />
       
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-0 md:px-12 md:pt-20 md:pb-0 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">

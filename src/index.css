@@ -69,3 +69,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@media (pointer: fine) {
+  body, a, button, input, textarea, select {
+    cursor: none !important;
+  }
+}

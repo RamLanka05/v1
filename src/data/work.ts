@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     id: 'rigveda-search',
     title: 'Rigveda Semantic Search Engine',
-    status: 'In Development',
+    status: 'Live',
     date: 'Winter 2025',
     role: 'ML Engineer',
     starred: true,
