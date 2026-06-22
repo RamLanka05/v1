@@ -93,10 +93,10 @@ export default function CustomCursor() {
         }}
       />
 
-      {/* Outer Ring: Tightly snapped to w-5 h-5, slightly thicker border, soft ambient glow */}
+      {/* Outer Ring: Tightly snapped to w-5 h-5, slightly thicker border*/}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-5 h-5 border-[1.5px] border-primary/80 rounded-full pointer-events-none z-50 shadow-[0_0_12px_1px_var(--color-primary)]"
+        className="fixed top-0 left-0 w-5 h-5 border-[1.5px] border-primary/80 rounded-full pointer-events-none z-50"
         style={{
           willChange: 'transform, opacity, background-color',
           transition: 'border-color 200ms ease-out',
