@@ -4,6 +4,7 @@ import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
 import TopBar from './components/TopBar'
 import CustomCursor from './components/CustomCursor'
+// import GithubCommits from './components/GitHubCommits'
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
