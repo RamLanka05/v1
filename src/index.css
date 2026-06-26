@@ -17,6 +17,10 @@
   --color-input: var(--input-background);
 }
 
+@theme {
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /* 2. Your Custom Figma Light Mode */
