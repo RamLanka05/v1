@@ -5,7 +5,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const opts: IntersectionObserverInit = { 
-      root: null, // Use the viewport
+      root: null,
       rootMargin: '-40% 0px -40% 0px', 
       threshold: 0 
     }
@@ -32,7 +32,6 @@ export default function Navigation() {
     const target = document.getElementById(section)
     if (!target) return
 
-    // Scroll naturally using the window
     const offset = target.getBoundingClientRect().top + window.scrollY - 100 // 100px padding
     window.scrollTo({ top: offset, behavior: 'smooth' })
   }

@@ -4,9 +4,7 @@ export default function TopBar() {
 
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
-      // Check if they explicitly saved 'light' in a previous visit
       if (localStorage.getItem('theme') === 'light') return false;
-      // Otherwise, force dark mode for everyone!
       return true; 
     }
     return true;

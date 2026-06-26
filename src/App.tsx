@@ -4,7 +4,6 @@ import About from './components/About'
 import WorkShowcase from './components/WorkShowcase'
 import TopBar from './components/TopBar'
 import CustomCursor from './components/CustomCursor'
-// import GitHubCommits from './components/GitHubCommits'
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
 
         <main className="md:w-1/2 flex flex-col gap-24 pt-12 pb-0 md:pt-24 md:pb-0">
           <About />
-          {/* <GitHubCommits /> */}
           <WorkShowcase />
         </main>
       </div>

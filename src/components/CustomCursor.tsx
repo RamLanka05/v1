@@ -10,7 +10,6 @@ export default function CustomCursor() {
   const animationFrameRef = useRef<number | null>(null)
 
   useEffect(() => {
-    // Check if device is mobile/touch
     if (window.matchMedia('(pointer: coarse)').matches) {
       setIsMobile(true)
       return
@@ -19,7 +18,6 @@ export default function CustomCursor() {
     const handleMouseMove = (e: MouseEvent): void => {
       targetPositionRef.current = { x: e.clientX, y: e.clientY }
 
-      // Check if hovering over clickable element
       const target = e.target as HTMLElement
       const isClickable = !!(
         target.closest('a') ||
@@ -77,7 +75,6 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Hide the default cursor */}
       <style>{`
         html, body, * {
           cursor: none !important;
