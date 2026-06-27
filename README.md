@@ -100,6 +100,14 @@ npm run lint
 npx tsc --noEmit
 ```
 
+## Author
+
+### Sathvik Ram Lanka
+
+- **GitHub:** [@RamLanka05](https://github.com/RamLanka05)
+- **LinkedIn:** [Sathvik Ram Lanka](https://www.linkedin.com/in/sathvik-r-lanka/)
+- **Affiliation:** Statistics & Computer Science, University of Illinois Urbana-Champaign
+
 ---
 
 ## 📝 License
