@@ -5,6 +5,7 @@ import WorkShowcase from './components/WorkShowcase'
 import TopBar from './components/TopBar'
 import CustomCursor from './components/CustomCursor'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <TopBar />
       <CustomCursor />
       <Analytics />
-      
+      <SpeedInsights />
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-0 md:px-12 md:pt-20 md:pb-0 lg:px-24 flex flex-col md:flex-row md:justify-between gap-12">
         
         <header className="md:sticky md:top-0 md:h-screen md:w-1/2 flex flex-col justify-between pt-12 pb-0 md:pt-24 md:pb-0">
