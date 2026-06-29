@@ -12,6 +12,10 @@ export default function About() {
         <p>
           When I'm stepping away from the keyboard and not tinkering with my Notion setups, you can usually find me at the rock climbing gym, testing out new recipes in the kitchen, or pursuing various other hobbies I switch between.
         </p>
+        <p>
+          Currently recruiting for Software Engineering Co-Op positions. <br />
+          CS &amp; Stats @ UIUC
+        </p>
       </div>
     </section>
   )
