@@ -24,6 +24,11 @@ export default function Hero() {
         I build robust, scalable applications with modern technologies, focusing on clean architecture and bridging the gap between low-level systems and full-stack engineering.
       </p>
 
+      <p>
+        Currently recruiting for Software Engineering Co-Op positions. <br />
+        CS &amp; Stats @ UIUC
+      </p>
+
       {/* Socials & Resume Row */}
       <div className="flex items-center gap-5">
         
