@@ -20,11 +20,11 @@ export default function Hero() {
         </span>
       </h2>
       
-      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-[400px] leading-relaxed mb-8">
+      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-[400px] leading-relaxed mb-4">
         I build robust, scalable applications with modern technologies, focusing on clean architecture and bridging the gap between low-level systems and full-stack engineering.
       </p>
 
-      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-[400px] leading-relaxed mb-8">
+      <p className="text-sm text-gray-600 dark:text-gray-400 max-w-[400px] leading-relaxed mb-8">
         Currently recruiting for Software Engineering Co-Op positions. <br />
         CS &amp; Stats @ UIUC
       </p>
