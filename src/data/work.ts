@@ -25,6 +25,20 @@ export type ExperienceItem = {
 // 2. Apply the type to the arrays
 export const projects: Project[] = [
   {
+    id: 'tessera',
+    title: 'Tessera: Decentralized Config Server',
+    status: 'In Development',
+    date: 'Summer 2026 - Now',
+    role: 'Lead Developer',
+    image: '',
+    url: '',
+    github: 'https://github.com/RamLanka05/tessera',
+    desc: 'A distributed configuration server built in Go with Raft consensus, PostgreSQL persistence, and gRPC APIs. Designed to solve the configuration management problem across microservices with strong consistency guarantees and fault tolerance.',
+    insight: 'Building a consensus-based system taught me that correctness under failure is harder than raw performance—every edge case in Raft required careful state machine validation and extensive testing across network partitions.',
+    tags: ['Go', 'Distributed Systems', 'Raft', 'gRPC', 'PostgreSQL'],
+    starred: true
+  },
+  {
     id: 'solar',
     title: 'SolAR',
     status: 'Completed',
