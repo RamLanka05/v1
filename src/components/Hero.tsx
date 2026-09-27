@@ -25,7 +25,7 @@ export default function Hero() {
       </p>
 
       <p className="text-sm text-gray-600 dark:text-gray-400 max-w-[400px] leading-relaxed mb-8">
-        Currently recruiting for Software Engineering New Grad & Intern positions. <br />
+        Currently recruiting for Software Engineering New Grad & Intern positions.
         CS &amp; Stats @ UIUC
       </p>
 

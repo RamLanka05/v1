@@ -26,15 +26,19 @@ export type ExperienceItem = {
 export const projects: Project[] = [
   {
     id: 'tessera',
-    title: 'Tessera: Decentralized Config Server',
+    title: 'Tessera: Distributed Config Server',
     status: 'In Development',
     date: 'Summer 2026 - Now',
     role: 'Lead Developer',
     image: '',
     url: '',
     github: 'https://github.com/RamLanka05/tessera',
-    desc: 'A distributed configuration server built in Go with Raft consensus, PostgreSQL persistence, and gRPC APIs. Designed to solve the configuration management problem across microservices with strong consistency guarantees and fault tolerance.',
-    insight: 'Building a consensus-based system taught me that correctness under failure is harder than raw performance—every edge case in Raft required careful state machine validation and extensive testing across network partitions.',
+    desc: `A fault-tolerant distributed configuration server built in Go with Raft consensus (go.etcd.io/raft/v3), \
+    PostgreSQL persistence, and gRPC APIs. Phase 1 delivered a production-grade REST API with JWT auth and a React dashboard. \
+    Phase 2 implements a multi-node Raft cluster with leader election, command replication, and consistent state across all nodes.`,
+    insight: `Building Raft from first principles taught me that distributed consensus requires more than the algorithm—careful state machine design, \
+     manual Ready loop management, and rigorous testing across failure modes is where real correctness lives. \
+     Every edge case in the log replication pipeline demands validation.`,
     tags: ['Go', 'Distributed Systems', 'Raft', 'gRPC', 'PostgreSQL'],
     starred: true
   },
@@ -48,8 +52,8 @@ export const projects: Project[] = [
     url: 'https://devpost.com/software/solar-ado76i',
     urlType: 'Demo', 
     github: 'https://github.com/Zaydo123/SolAR', 
-    desc: 'A decentralized Git server built on the blockchain, allowing for censorship-resistant code hosting and version control.',
-    insight: 'By leveraging Solana for consensus and Arweave for permanent storage, we eliminated the single points of failure present in traditional Git providers.',
+    desc: `A decentralized Git server built on the blockchain, allowing for censorship-resistant code hosting and version control.`,
+    insight: `By leveraging Solana for consensus and Arweave for permanent storage, we eliminated the single points of failure present in traditional Git providers.`,
     tags: ['Solana', 'ARweave', 'Web3', 'Architecture']
   },
   {
